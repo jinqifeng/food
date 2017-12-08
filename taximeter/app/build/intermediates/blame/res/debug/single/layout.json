@@ -36,6 +36,10 @@
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\6bee97473c22dd5b9a21ecce5293416892212ad5\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tooltip.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\cd4a33751e50fdfed8dcce0847d2fcf249529a4b\\output\\res\\layout\\tooltip.xml"
     },
@@ -168,6 +172,10 @@
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\\output\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pref_screen.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\pref_screen.xml"
+    },
+    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_dropdown_material.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\98770a3babc6ab2700c83ae6f5baa9cf176a793d\\output\\res\\layout\\preference_dropdown_material.xml"
     },
@@ -262,6 +270,10 @@
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_dialog_edittext.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\77ebb876d6826654c5739f40e3d54cd46653c075\\output\\res\\layout\\preference_dialog_edittext.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pref_dialog_time.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\pref_dialog_time.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",

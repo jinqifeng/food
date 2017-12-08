@@ -1,13 +1,13 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:defaultValue="true"
         android:key="example_switch"
         android:summary="@string/pref_description_social_recommendations"
         android:title="@string/pref_title_social_recommendations" />
 
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
-    <ListPreference
+    <android.support.v7.preference.ListPreference
         android:defaultValue="-1"
         android:entries="@array/pref_general_second_list"
         android:entryValues="@array/pref_general_second_list_values"
@@ -17,7 +17,7 @@
         android:title="@string/pref_title_general_second" />
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
-    <EditTextPreference
+    <android.support.v7.preference.EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_general_third_edit"
         android:inputType="textCapWords"
@@ -26,7 +26,7 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_general_third" />
-    <EditTextPreference
+    <android.support.v7.preference.EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_general_forth_edit"
         android:inputType="textCapWords"
@@ -35,7 +35,7 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_general_forth" />
-    <EditTextPreference
+    <android.support.v7.preference.EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_general_fifth_edit"
         android:inputType="textCapWords"
@@ -50,4 +50,4 @@
          dismiss it. -->
 
 
-</PreferenceScreen>
+</android.support.v7.preference.PreferenceScreen>

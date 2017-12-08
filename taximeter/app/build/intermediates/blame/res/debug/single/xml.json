@@ -1,5 +1,9 @@
 [
     {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_account_preferences.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\xml\\pref_account_preferences.xml"
+    },
+    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_tariff.xml",
         "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\xml\\pref_tariff.xml"
     },

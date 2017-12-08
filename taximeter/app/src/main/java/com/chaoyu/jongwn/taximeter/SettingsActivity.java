@@ -11,14 +11,18 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.ListPreference;
-import android.preference.Preference;
+//import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceFragmentCompat;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.support.v7.preference.Preference;
 
 import java.util.List;
 
@@ -33,93 +37,25 @@ import java.util.List;
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings
  * API Guide</a> for more information on developing a Settings UI.
  */
-public class SettingsActivity extends AppCompatPreferenceActivity {
+public class SettingsActivity extends AppCompatActivity {
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
      */
-    private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object value) {
-            String stringValue = value.toString();
-
-            if (preference instanceof ListPreference) {
-                // For list preferences, look up the correct display value in
-                // the preference's 'entries' list.
-                ListPreference listPreference = (ListPreference) preference;
-                int index = listPreference.findIndexOfValue(stringValue);
-
-                // Set the summary to reflect the new value.
-                preference.setSummary(
-                        index >= 0
-                                ? listPreference.getEntries()[index]
-                                : null);
-
-            } else if (preference instanceof RingtonePreference) {
-                // For ringtone preferences, look up the correct display value
-                // using RingtoneManager.
-                if (TextUtils.isEmpty(stringValue)) {
-                    // Empty values correspond to 'silent' (no ringtone).
-                    preference.setSummary("test by jwn");
-
-                } else {
-                    Ringtone ringtone = RingtoneManager.getRingtone(
-                            preference.getContext(), Uri.parse(stringValue));
-
-                    if (ringtone == null) {
-                        // Clear the summary if there was a lookup error.
-                        preference.setSummary(null);
-                    } else {
-                        // Set the summary to reflect the new ringtone display
-                        // name.
-                        String name = ringtone.getTitle(preference.getContext());
-                        preference.setSummary(name);
-                    }
-                }
-
-            } else {
-                // For all other preferences, set the summary to the value's
-                // simple string representation.
-                preference.setSummary(stringValue);
-            }
-            return true;
-        }
-    };
-
-    /**
-     * Helper method to determine if the device has an extra-large screen. For
-     * example, 10" tablets are extra-large.
-     */
-    private static boolean isXLargeTablet(Context context) {
-        return (context.getResources().getConfiguration().screenLayout
-                & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
-    }
-
-    /**
-     * Binds a preference's summary to its value. More specifically, when the
-     * preference's value is changed, its summary (line of text below the
-     * preference title) is updated to reflect the value. The summary is also
-     * immediately updated upon calling this method. The exact display format is
-     * dependent on the type of preference.
-     *
-     * @see #sBindPreferenceSummaryToValueListener
-     */
-    private static void bindPreferenceSummaryToValue(Preference preference) {
-        // Set the listener to watch for value changes.
-        preference.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
-
-        // Trigger the listener immediately with the preference's
-        // current value.
-        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-                PreferenceManager
-                        .getDefaultSharedPreferences(preference.getContext())
-                        .getString(preference.getKey(), ""));
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
         setupActionBar();
+        if(savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_general, new GeneralPreferenceFragment()).commit();
+     /*       getSupportFragmentManager().beginTransaction().add(R.id.fragment_tariff, new TariffPreferenceFragment()).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_print, new PrintPreferenceFragment()).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_account, new AccountPreferenceFragment()).commit();*/
+
+        }
+
     }
 
     /**
@@ -134,55 +70,40 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean onIsMultiPane() {
-        return isXLargeTablet(this);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public void onBuildHeaders(List<Header> target) {
-        loadHeadersFromResource(R.xml.pref_headers, target);
-    }
-
-    /**
-     * This method stops fragment injection in malicious applications.
-     * Make sure to deny any unknown fragments here.
-     */
-    protected boolean isValidFragment(String fragmentName) {
-        return PreferenceFragment.class.getName().equals(fragmentName)
-                || GeneralPreferenceFragment.class.getName().equals(fragmentName)
-                || TariffPreferenceFragment.class.getName().equals(fragmentName)
-                || PrintPreferenceFragment.class.getName().equals(fragmentName)
-                || AccountPreferenceFragment.class.getName().equals(fragmentName);
-    }
 
     /**
      * This fragment shows general preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class GeneralPreferenceFragment extends PreferenceFragment {
+    public static class GeneralPreferenceFragment extends PreferenceFragmentCompat {
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        public void onCreatePreferences(Bundle bundle, String s) {
+            // Load the Preferences from the XML file
             addPreferencesFromResource(R.xml.pref_general);
-            setHasOptionsMenu(true);
+        }
 
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-            bindPreferenceSummaryToValue(findPreference("general_second"));
-            bindPreferenceSummaryToValue(findPreference("general_third"));
-            bindPreferenceSummaryToValue(findPreference("general_forth"));
-            bindPreferenceSummaryToValue(findPreference("general_fifth"));
+        @Override
+        public void onDisplayPreferenceDialog(android.support.v7.preference.Preference preference) {
+
+            // Try if the preference is one of our custom Preferences
+            DialogFragment dialogFragment = null;
+            if (preference instanceof TimePreference) {
+                // Create a new instance of TimePreferenceDialogFragment with the key of the related
+                // Preference
+                dialogFragment = TimePreferenceDialogFragmentCompat.newInstance(preference.getKey());
+            }
+
+
+            if (dialogFragment != null) {
+                // The dialog was created (it was one of our custom Preferences), show the dialog for it
+                dialogFragment.setTargetFragment(this, 0);
+                dialogFragment.show(this.getFragmentManager(), "android.support.v7.preference" +
+                        ".PreferenceFragment.DIALOG");
+            } else {
+                // Dialog creation could not be handled here. Try with the super method.
+                super.onDisplayPreferenceDialog(preference);
+            }
 
         }
 
@@ -202,19 +123,35 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class PrintPreferenceFragment extends PreferenceFragment {
+    public static class PrintPreferenceFragment extends PreferenceFragmentCompat {
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        public void onCreatePreferences(Bundle bundle, String s) {
+            // Load the Preferences from the XML file
             addPreferencesFromResource(R.xml.pref_print);
-            setHasOptionsMenu(true);
+        }
 
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-            bindPreferenceSummaryToValue(findPreference("print_first"));
-            bindPreferenceSummaryToValue(findPreference("print_second"));
+        @Override
+        public void onDisplayPreferenceDialog(android.support.v7.preference.Preference preference) {
+
+            // Try if the preference is one of our custom Preferences
+            DialogFragment dialogFragment = null;
+            if (preference instanceof TimePreference) {
+                // Create a new instance of TimePreferenceDialogFragment with the key of the related
+                // Preference
+                dialogFragment = TimePreferenceDialogFragmentCompat.newInstance(preference.getKey());
+            }
+
+
+            if (dialogFragment != null) {
+                // The dialog was created (it was one of our custom Preferences), show the dialog for it
+                dialogFragment.setTargetFragment(this, 0);
+                dialogFragment.show(this.getFragmentManager(), "android.support.v7.preference" +
+                        ".PreferenceFragment.DIALOG");
+            } else {
+                // Dialog creation could not be handled here. Try with the super method.
+                super.onDisplayPreferenceDialog(preference);
+            }
+
         }
 
         @Override
@@ -233,18 +170,35 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class TariffPreferenceFragment extends PreferenceFragment {
+    public static class TariffPreferenceFragment extends PreferenceFragmentCompat {
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        public void onCreatePreferences(Bundle bundle, String s) {
+            // Load the Preferences from the XML file
             addPreferencesFromResource(R.xml.pref_tariff);
-            setHasOptionsMenu(true);
+        }
 
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-            bindPreferenceSummaryToValue(findPreference("sync_frequency"));
+        @Override
+        public void onDisplayPreferenceDialog(android.support.v7.preference.Preference preference) {
+
+            // Try if the preference is one of our custom Preferences
+            DialogFragment dialogFragment = null;
+            if (preference instanceof TimePreference) {
+                // Create a new instance of TimePreferenceDialogFragment with the key of the related
+                // Preference
+                dialogFragment = TimePreferenceDialogFragmentCompat.newInstance(preference.getKey());
+            }
+
+
+            if (dialogFragment != null) {
+                // The dialog was created (it was one of our custom Preferences), show the dialog for it
+                dialogFragment.setTargetFragment(this, 0);
+                dialogFragment.show(this.getFragmentManager(), "android.support.v7.preference" +
+                        ".PreferenceFragment.DIALOG");
+            } else {
+                // Dialog creation could not be handled here. Try with the super method.
+                super.onDisplayPreferenceDialog(preference);
+            }
+
         }
 
         @Override
@@ -258,23 +212,34 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class AccountPreferenceFragment extends PreferenceFragment {
+    public static class AccountPreferenceFragment extends PreferenceFragmentCompat {
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        public void onCreatePreferences(Bundle bundle, String s) {
+            // Load the Preferences from the XML file
             addPreferencesFromResource(R.xml.pref_account);
-            setHasOptionsMenu(true);
+        }
 
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-            bindPreferenceSummaryToValue(findPreference("account_first"));
-            bindPreferenceSummaryToValue(findPreference("account_second"));
-            bindPreferenceSummaryToValue(findPreference("account_third"));
-            bindPreferenceSummaryToValue(findPreference("account_forth"));
-            bindPreferenceSummaryToValue(findPreference("account_second_list"));
-            bindPreferenceSummaryToValue(findPreference("account_fifth"));
+        @Override
+        public void onDisplayPreferenceDialog(android.support.v7.preference.Preference preference) {
+
+            // Try if the preference is one of our custom Preferences
+            DialogFragment dialogFragment = null;
+            if (preference instanceof TimePreference) {
+                // Create a new instance of TimePreferenceDialogFragment with the key of the related
+                // Preference
+                dialogFragment = TimePreferenceDialogFragmentCompat.newInstance(preference.getKey());
+            }
+
+
+            if (dialogFragment != null) {
+                // The dialog was created (it was one of our custom Preferences), show the dialog for it
+                dialogFragment.setTargetFragment(this, 0);
+                dialogFragment.show(this.getFragmentManager(), "android.support.v7.preference" +
+                        ".PreferenceFragment.DIALOG");
+            } else {
+                // Dialog creation could not be handled here. Try with the super method.
+                super.onDisplayPreferenceDialog(preference);
+            }
 
         }
 

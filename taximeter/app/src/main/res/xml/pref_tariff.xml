@@ -1,9 +1,9 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
-    <ListPreference
+    <android.support.v7.preference.ListPreference
         android:defaultValue="180"
         android:entries="@array/pref_sync_frequency_titles"
         android:entryValues="@array/pref_sync_frequency_values"
@@ -14,8 +14,8 @@
 
     <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
          design guidelines. -->
-    <Preference android:title="@string/pref_title_system_sync_settings">
+    <android.support.v7.preference.Preference android:title="@string/pref_title_system_sync_settings">
         <intent android:action="android.settings.SYNC_SETTINGS" />
-    </Preference>
+    </android.support.v7.preference.Preference>
 
-</PreferenceScreen>
+</android.support.v7.preference.PreferenceScreen>

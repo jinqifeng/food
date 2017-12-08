@@ -1,4 +1,4 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- A 'parent' preference, which enables/disables child preferences (below)
          when checked/unchecked. -->
@@ -15,7 +15,7 @@
 
     <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
 
-    <EditTextPreference
+    <android.support.v7.preference.EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_print_first_edit"
         android:inputType="textCapWords"
@@ -24,7 +24,7 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_print_first" />
-    <EditTextPreference
+    <android.support.v7.preference.EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_print_second_edit"
         android:inputType="textCapWords"
@@ -33,4 +33,4 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_print_second" />
-</PreferenceScreen>
+</android.support.v7.preference.PreferenceScreen>
