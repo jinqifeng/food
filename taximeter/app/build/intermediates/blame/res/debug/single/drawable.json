@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\android work\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\start.png",
+        "source": "F:\\android work\\taximeter\\app\\src\\main\\res\\drawable\\start.png"
+    },
+    {
+        "merged": "F:\\android work\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
+        "source": "F:\\android work\\taximeter\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\android work\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\end.png",
+        "source": "F:\\android work\\taximeter\\app\\src\\main\\res\\drawable\\end.png"
+    }
+]
