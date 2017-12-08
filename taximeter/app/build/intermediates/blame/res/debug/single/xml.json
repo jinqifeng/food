@@ -1,6 +1,22 @@
 [
     {
-        "merged": "F:\\android work\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
-        "source": "F:\\android work\\taximeter\\app\\src\\main\\res\\xml\\preferences.xml"
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_tariff.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\xml\\pref_tariff.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_print.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\xml\\pref_print.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_account.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\xml\\pref_account.xml"
     }
 ]

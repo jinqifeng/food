@@ -1,9 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">taximeter</string>
+    <string name="title_activity_settings">Settings</string>
 
-    <string name="app_name">Taximeter</string>
-    <string name="hello">Hello taximeter!</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <!-- Strings related to Settings -->
 
+    <!-- Example General settings -->
+    <string name="pref_header_general">General Settings</string>
+
+    <string name="pref_title_social_recommendations">Currency</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_general_second">Distance measure</string>
+    <string-array name="pref_general_second_list">
+        <item>km</item>
+        <item>mile</item>
+    </string-array>
+    <string-array name="pref_general_second_list_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+
+    <string name="pref_general_third">Speed Calibration</string>
+    <string name="pref_general_third_edit">1.05</string>
+
+    <string name="pref_general_forth">Waiting start delay(seconds)</string>
+    <string name="pref_general_forth_edit">5</string>
+
+    <string name="pref_general_fifth">Tax description</string>
+    <string name="pref_general_fifth_edit">Tax</string>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Tariff Settings</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for print -->
+    <string name="pref_header_notifications">Print Settings</string>
+
+    <string name="pref_print_first">Bill printout header</string>
+    <string name="pref_print_first_edit">Taximet Taxi Bill</string>
+
+    <string name="pref_print_second">Bill printout footer</string>
+    <string name="pref_print_second_edit">Thank you</string>
+
+    <!-- Example settings for account -->
+    <string name="pref_header_account">Account Settings</string>
+
+    <string name="pref_account_first">Email</string>
+    <string name="pref_account_first_edit">Email</string>
+
+    <string name="pref_account_second">Password</string>
+    <string name="pref_account_second_edit">Password</string>
+    <string name="pref_account_third">User Name</string>
+    <string name="pref_account_third_edit">User Name</string>
+    <string name="pref_account_forth">Taxi Number</string>
+    <string name="pref_account_forth_edit">CAX-1134</string>
+    <string name="pref_account_fifth">Contact Phone</string>
+    <string name="pref_account_fifth_edit">0710123456</string>
+    <string name="pref_title_account_second">Taxi Type</string>
+    <string-array name="pref_account_second_list">
+        <item>Car</item>
+        <item>Van</item>
+        <item>Single Cab</item>
+        <item>Double Cab</item>
+        <item>Wagon</item>
+        <item>Mini-Wagon</item>
+        <item>Three Wheeler</item>
+        <item>Bus</item>
+        <item>Lorry</item>
+        <item>Container</item>
+        <item>Truck</item>
+        <item>SUV</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="pref_account_second_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>
