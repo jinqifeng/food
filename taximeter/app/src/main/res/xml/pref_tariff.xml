@@ -1,21 +1,61 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
-         dismiss it. -->
-    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
-    <ListPreference
-        android:defaultValue="180"
-        android:entries="@array/pref_sync_frequency_titles"
-        android:entryValues="@array/pref_sync_frequency_values"
-        android:key="sync_frequency"
-        android:negativeButtonText="@null"
-        android:positiveButtonText="@null"
-        android:title="@string/pref_title_sync_frequency" />
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="50.00"
+            android:inputType="textCapWords"
+            android:key="initial_charge"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Initial Charge" />
 
-    <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
-         design guidelines. -->
-    <Preference android:title="@string/pref_title_system_sync_settings">
-        <intent android:action="android.settings.SYNC_SETTINGS" />
-    </Preference>
+
+        <com.chaoyu.jongwn.taximeter.DistanceChargePreference
+            android:key="distance_charge"
+            android:title="Distance charge"
+            android:defaultValue="1.2-8.0-30.0"
+            android:positiveButtonText="@android:string/ok"
+            android:negativeButtonText="@android:string/cancel" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="5.00"
+            android:inputType="textCapWords"
+            android:key="waiting_charge"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Waiting Charge" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="50.00"
+            android:inputType="textCapWords"
+            android:key="minimun_fare"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Minimun Fare" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="1000.0"
+            android:inputType="textCapWords"
+            android:key="maximum_fare"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Maximum Fare" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="0.00"
+            android:inputType="textCapWords"
+            android:key="tax"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Tax %" />
 
 </PreferenceScreen>

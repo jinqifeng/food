@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,197 +9,243 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <LinearLayout
-        android:layout_width="fill_parent" android:layout_below="@+id/my_toolbar"
-        android:layout_height="wrap_content" android:paddingBottom="25dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false" android:layout_alignParentRight="false"
+        android:id="@+id/Fare">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fare"
+
+            android:textColor="#ffffff"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:gravity="right"
+
+            android:text="lkr"
+
+            android:textColor="#ffffff" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/tvFare"
+            android:textColor="#ff0000"
+            android:text="2250.00"
+            android:textSize="55dp"
+
+            android:textStyle="bold" android:gravity="left"
+
+            />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent" android:id="@+id/Distance"
+        android:layout_height="wrap_content" android:layout_below="@+id/Fare">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Distance"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="33330.00"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:gravity="right"
+
+            android:id="@+id/tvDistance" android:layout_below="@+id/tvFare" android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="km"
+            android:textColor="#ffffff"
+            />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent" android:id="@+id/WaitTime"
+        android:layout_height="wrap_content" android:layout_below="@+id/Distance">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Wait Time"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="right"
+
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="0.00"
+            android:textSize="35dp"
+            android:textStyle="bold"
+
+            android:gravity="right"
+
+            android:id="@+id/tvWaitTime" android:layout_below="@+id/tvDistance" android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="mins"
+            android:textColor="#ffffff"
+            />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent" android:id="@+id/Speed"
+        android:layout_height="wrap_content" android:layout_below="@+id/WaitTime">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Speed"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="park" android:gravity="right"  android:textSize="35dp"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvSpeed" android:layout_below="@+id/tvWaitTime" android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent" android:layout_below="@+id/Speed"
+        android:layout_height="wrap_content" android:paddingBottom="5dp"
+        android:orientation="horizontal"
         android:layout_alignParentRight="true" android:layout_alignParentLeft="true"
 
         android:id="@+id/Start_end">
 
-        <Button android:background="@drawable/start"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnStartEnd"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent" android:paddingBottom="15dp"
-        android:layout_height="wrap_content" android:layout_below="@+id/Start_end"
-        android:layout_alignParentTop="false" android:layout_alignParentRight="false"
-        android:id="@+id/Fare">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Fare"
-            android:textColor="#ffffff"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tvFare"
-            android:textColor="#ff0000"
-            android:text="50.00"
-            android:textSize="25dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="10dp" android:layout_weight="0.7"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="lkr"
-            android:textColor="#ffffff"
-            android:layout_weight="0.3"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal" android:paddingBottom="15dp"
-        android:layout_width="fill_parent" android:id="@+id/Distance"
-        android:layout_height="wrap_content" android:layout_below="@+id/Fare">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Distance"
-            android:textColor="#ffffff"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff0000"
-            android:text="0.00"
-            android:textSize="25dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tvDistance" android:layout_below="@+id/tvFare" android:layout_centerHorizontal="true"
-            android:layout_marginRight="10dp" android:layout_weight="0.3"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="km"
-            android:textColor="#ffffff"
-            android:layout_weight="0.3"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal" android:paddingBottom="15dp"
-        android:layout_width="fill_parent" android:id="@+id/WaitTime"
-        android:layout_height="wrap_content" android:layout_below="@+id/Distance">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Wait Time"
-            android:textColor="#ffffff"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff0000"
-            android:text="0.00"
-            android:textSize="25dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tvWaitTime" android:layout_below="@+id/tvDistance" android:layout_centerHorizontal="true"
-            android:layout_marginRight="10dp" android:layout_weight="0.3"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="mins"
-            android:textColor="#ffffff"
-            android:layout_weight="0.3"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal" android:paddingBottom="25dp"
-        android:layout_width="fill_parent" android:id="@+id/Speed"
-        android:layout_height="wrap_content" android:layout_below="@+id/WaitTime">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Speed"
-            android:textColor="#ffffff"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="#ff0000"
-            android:text="park"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tvSpeed" android:layout_below="@+id/tvWaitTime" android:layout_centerHorizontal="true"
-            android:layout_marginRight="10dp" android:layout_weight="0.6"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent" android:layout_below="@+id/Speed"
-        android:layout_height="wrap_content" android:paddingBottom="25dp"
-        android:layout_alignParentLeft="true" android:id="@+id/linearLayout3">
         <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Setting"
-            android:id="@+id/btnSettings" android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Print"
-            android:id="@+id/btnPrint" android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Tariff"
-            android:id="@+id/btnTariff" android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="History"
-            android:id="@+id/btnHistory" android:layout_gravity="center_horizontal" android:layout_weight="1"/>
-    </LinearLayout>
+            android:id="@+id/btnStart"
 
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="horizontal" android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:paddingBottom="25dp"
-        android:id="@+id/WorkingStatus" android:layout_below="@+id/linearLayout3"
-        android:layout_centerHorizontal="true">
-        <RadioButton android:layout_width="0dp" android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:textAppearance="?android:attr/textAppearanceMedium" android:text="Day"
-            android:layout_weight="1"/>
-        <RadioButton android:layout_width="0dp" android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:textAppearance="?android:attr/textAppearanceLarge" android:text="Night"
-            android:id="@+id/tvGPSStatus"
-            android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
-            android:layout_weight="1"/>
-    </RadioGroup>
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#ffcc00"
+            android:elevation="9dp"
+            android:ellipsize="middle"
+            android:fadingEdge="vertical"
+            android:soundEffectsEnabled="false"
+            android:text="START"
+
+            tools:shadowColor="@color/cardview_dark_background"
+            tools:shadowRadius="2" />
+
+        <Button
+            android:id="@+id/btnEnd"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:enabled="false"
+            android:text="END" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/RiderPhoneNumber" android:layout_below="@+id/WorkingStatus"
-        android:layout_centerHorizontal="true">
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:textAppearance="?android:attr/textAppearanceMedium" android:text="Rider Phone"
-            android:layout_weight="0.5"/>
-        <EditText android:layout_width="0dp" android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/teRiderPhone"
+        android:layout_marginLeft="25dp" android:layout_marginRight="25dp"
+         android:paddingTop="1dp"
+        android:id="@+id/RiderPhoneNumber" android:layout_below="@+id/Start_end"
+        >
 
-            android:layout_centerHorizontal="true"
+        <EditText android:layout_width="0dp" android:layout_height="match_parent"
+
+            android:id="@+id/teRiderPhone"
+            android:background="#ff8855"
+            android:textColor="#0000ff"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="SMS Send"
-            android:id="@+id/btnSend" android:layout_gravity="center_horizontal" android:layout_weight="0.4"/>
+            android:background="#00ff00"
+            android:id="@+id/btnSend"  android:layout_weight="0.6"/>
     </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_below="@+id/RiderPhoneNumber"
+        android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginRight="7dp"
+        android:id="@+id/linearLayout3">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#999999"
+            android:src="@drawable/ic_local_printshop_white_24dp"
+            android:id="@+id/btnPrint" android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#999999" android:layout_marginLeft="7dp"
+            android:src="@drawable/ic_list_white_24dp"
+            android:id="@+id/btnHistory"  android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#999999" android:layout_marginLeft="7dp"
+            android:src="@drawable/ic_description_white_24dp"
+            android:id="@+id/btnTariff" android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#999999" android:layout_marginLeft="7dp"
+            android:src="@drawable/ic_settings_white_24dp"
+           />
+    </LinearLayout>
+
+
+
 
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:2:1-73:12
 	package
 		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml
@@ -25,8 +25,26 @@ uses-permission#android.permission.READ_CONTACTS
 ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:8:5-72
 	android:name
 		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:8:22-69
+uses-feature#android.hardware.bluetooth
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:10:5-12:36
+	android:required
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:12:9-33
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:11:9-50
+uses-permission#android.permission.BLUETOOTH
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:14:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:15:5-74
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:15:22-71
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:16:5-95
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:16:22-76
 application
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:10:5-41:19
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:17:5-71:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\JongWN\.android\build-cache\fe7044e7896bcb0a573ec2ae36870b8753f184a3\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:transition:26.1.0] C:\Users\JongWN\.android\build-cache\2ae15c2c838ef3c99a50fffb9cea4dad058fe7bf\output\AndroidManifest.xml:22:5-26:19
@@ -43,56 +61,85 @@ MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.androi
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\103ed5ab29c31299d979be25057670d87e1ed950\output\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\6bee97473c22dd5b9a21ecce5293416892212ad5\output\AndroidManifest.xml:25:5-29:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\3d18cb13633dc93f74fd9503bc3dc65dc0a253f5\output\AndroidManifest.xml:24:5-28:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\9ab87362ab61492e526463aec4ea8cd52fc5072e\output\AndroidManifest.xml:22:5-26:19
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:20:9-41
 	android:supportsRtl
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:22:9-35
 	android:roundIcon
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:21:9-54
 	android:allowBackup
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:18:9-35
 	android:icon
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:9-45
 	android:theme
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:16:9-65
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:23:9-65
 activity#com.chaoyu.jongwn.taximeter.MainActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:24:9-30:20
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:17:19-47
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:24:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:28:27-74
 activity#com.chaoyu.jongwn.taximeter.SettingsActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:24:9-32:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:31:9-43:20
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:26:13-60
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:33:13-60
 	android:parentActivityName
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:28:13-82
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:34:13-55
 	android:theme
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:27:13-49
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:35:13-49
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:25:13-45
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:32:13-45
+intent-filter#android.intent.action.VIEW
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:36:13-38:29
+action#android.intent.action.VIEW
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:37:25-66
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:29:13-31:76
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:40:13-42:76
 	android:value
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:31:17-73
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:42:17-73
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:30:17-63
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:41:17-63
 activity#com.chaoyu.jongwn.taximeter.LoginActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:33:9-40:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:44:9-51:20
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:35:13-57
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:46:13-57
 	android:parentActivityName
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:36:13-82
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:47:13-55
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:34:13-42
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:45:13-42
+activity#com.chaoyu.jongwn.taximeter.PrintActivity
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:52:9-60:20
+	android:label
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:54:13-57
+	android:parentActivityName
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:55:13-55
+	android:theme
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:56:13-69
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:53:13-42
+activity#com.chaoyu.jongwn.taximeter.HistoryActivity
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:61:9-69:20
+	android:label
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:63:13-59
+	android:theme
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:64:13-69
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:62:13-44
+service#com.chaoyu.jongwn.taximeter.service.CounterService
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:70:9-58
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:70:18-56
 uses-sdk
 INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\JongWN\.android\build-cache\fe7044e7896bcb0a573ec2ae36870b8753f184a3\output\AndroidManifest.xml:5:5-7:41
@@ -111,6 +158,7 @@ MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.androi
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\103ed5ab29c31299d979be25057670d87e1ed950\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\6bee97473c22dd5b9a21ecce5293416892212ad5\output\AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\3d18cb13633dc93f74fd9503bc3dc65dc0a253f5\output\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\9ab87362ab61492e526463aec4ea8cd52fc5072e\output\AndroidManifest.xml:20:5-44
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
@@ -134,6 +182,7 @@ MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\JongWN
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\7422a2b02edce8785b5ba87152b1cb4afb272871\output\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\103ed5ab29c31299d979be25057670d87e1ed950\output\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\6bee97473c22dd5b9a21ecce5293416892212ad5\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\9ab87362ab61492e526463aec4ea8cd52fc5072e\output\AndroidManifest.xml:23:9-25:38
 	android:value
 		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:28:13-35
 	android:name

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">taximeter</string>
+    <string name="app_name">BES Taxi Meter</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->
@@ -92,6 +92,8 @@
     <string name="pref_account_forth_edit">CAX-1134</string>
     <string name="pref_account_fifth">Contact Phone</string>
     <string name="pref_account_fifth_edit">0710123456</string>
+    <string name="pref_account_date_picker">0710123456</string>
+    <string name="pref_account_date_picker_edit">31/12/2018</string>
     <string name="pref_title_account_second">Taxi Type</string>
     <string-array name="pref_account_second_list">
         <item>Car</item>
@@ -138,4 +140,14 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_date">DateActivity</string>
+    <string name="title_activity_print">PrintActivity</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string-array name="history_period">
+        <item>Last Day</item>
+        <item>Last Week</item>
+        <item>Last Month</item>
+        <item>Custom</item>
+    </string-array>
+
 </resources>

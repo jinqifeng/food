@@ -53,5 +53,30 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_account_fifth" />
+<!--
+    <Preference
+        android:title="Expire Date"
+        android:summary="" >
+        <intent
+            android:targetPackage="com.chaoyu.jongwn.taximeter"
+            android:targetClass="com.chaoyu.jongwn.taximeter.TimePreferenceActivity"
+            android:action="android.intent.action.VIEW" />
+    </Preference>
+-->
+
+
+    <!--    <com.chaoyu.jongwn.taximeter.TimePreference
+            style="@style/AppPreference.DialogPreference"
+            android:defaultValue="90"
+            android:key="@string/pref_pref4"
+            android:summary="Taximeter will be expired at "
+            android:title="Expire Date"/>-->
+        <com.chaoyu.jongwn.taximeter.DatePreference
+            android:key="date_picker"
+            android:title="Expire Date"
+            android:summary="Taximeter will expire at "
+            android:defaultValue="2014-08-01"
+            android:positiveButtonText="@android:string/ok"
+            android:negativeButtonText="@android:string/cancel" />
 
 </PreferenceScreen>

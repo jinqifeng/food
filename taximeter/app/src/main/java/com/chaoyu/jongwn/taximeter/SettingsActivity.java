@@ -19,6 +19,7 @@ import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.List;
 
@@ -244,7 +245,13 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-            bindPreferenceSummaryToValue(findPreference("sync_frequency"));
+            bindPreferenceSummaryToValue(findPreference("initial_charge"));
+            bindPreferenceSummaryToValue(findPreference("distance_charge"));
+            bindPreferenceSummaryToValue(findPreference("waiting_charge"));
+            bindPreferenceSummaryToValue(findPreference("minimun_fare"));
+            bindPreferenceSummaryToValue(findPreference("maximum_fare"));
+            bindPreferenceSummaryToValue(findPreference("tax"));
+
         }
 
         @Override
@@ -258,7 +265,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class AccountPreferenceFragment extends PreferenceFragment {
+    public static class AccountPreferenceFragment extends PreferenceFragment implements View.OnClickListener  {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -275,7 +282,15 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference("account_forth"));
             bindPreferenceSummaryToValue(findPreference("account_second_list"));
             bindPreferenceSummaryToValue(findPreference("account_fifth"));
+            bindPreferenceSummaryToValue(findPreference("date_picker"));
 
+        }
+
+        @Override
+        public void onClick(View v){
+            switch (v.getId()) {
+
+            }
         }
 
         @Override

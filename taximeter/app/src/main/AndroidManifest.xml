@@ -7,9 +7,16 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -24,8 +31,12 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:theme="@style/SettingsTheme"
-            android:parentActivityName="com.chaoyu.jongwn.taximeter.MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SettingsTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.chaoyu.jongwn.taximeter.MainActivity" />
@@ -33,11 +44,30 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName="com.chaoyu.jongwn.taximeter.MainActivity">
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.chaoyu.jongwn.taximeter.MainActivity" />
         </activity>
+        <activity
+            android:name=".PrintActivity"
+            android:label="@string/title_activity_print"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chaoyu.jongwn.taximeter.MainActivity" />
+        </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/title_activity_history"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chaoyu.jongwn.taximeter.MainActivity" />
+        </activity>
+        <service android:name=".service.CounterService"/>
     </application>
 
 </manifest>
