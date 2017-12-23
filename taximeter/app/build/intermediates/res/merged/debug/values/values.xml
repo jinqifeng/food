@@ -47,6 +47,16 @@
         <item>11</item>
         <item>12</item>
     </string-array>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
     <string-array name="pref_general_second_list">
         <item>km</item>
         <item>mile</item>
@@ -702,8 +712,8 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">4dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -886,14 +896,15 @@
     <string name="pref_account_date_picker_edit">31/12/2018</string>
     <string name="pref_account_fifth">Contact Phone</string>
     <string name="pref_account_fifth_edit">0710123456</string>
-    <string name="pref_account_first">Email</string>
-    <string name="pref_account_first_edit">Email</string>
+    <string name="pref_account_first"/>
+    <string name="pref_account_first_edit">123@mail.com</string>
     <string name="pref_account_forth">Taxi Number</string>
     <string name="pref_account_forth_edit">CAX-1134</string>
     <string name="pref_account_second">Password</string>
-    <string name="pref_account_second_edit">Password</string>
+    <string name="pref_account_second_edit">12345</string>
     <string name="pref_account_third">User Name</string>
     <string name="pref_account_third_edit">User Name</string>
+    <string name="pref_default_display_name">John Smith</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact
         based on your message history
     </string>
@@ -911,11 +922,17 @@
     <string name="pref_print_first_edit">Taximet Taxi Bill</string>
     <string name="pref_print_second">Bill printout footer</string>
     <string name="pref_print_second_edit">Thank you</string>
+    <string name="pref_ringtone_silent">Silent</string>
     <string name="pref_title_account_second">Taxi Type</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string name="pref_title_display_name">Display name</string>
     <string name="pref_title_general_second">Distance measure</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
     <string name="pref_title_social_recommendations">Currency</string>
     <string name="pref_title_sync_frequency">Sync frequency</string>
     <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_title_vibrate">Vibrate</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="search_menu_title">Search</string>
@@ -925,6 +942,8 @@
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_print">PrintActivity</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_tariff">Tariff</string>
+    <string name="title_activity_tariff2">Tariff</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -940,8 +959,12 @@
         <!-- To tint EditText and TimePicker -->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

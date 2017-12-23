@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:2:1-73:12
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:2:1-89:12
 	package
 		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml
@@ -25,142 +25,170 @@ uses-permission#android.permission.READ_CONTACTS
 ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:8:5-72
 	android:name
 		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:8:22-69
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:9:5-75
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:9:22-72
 uses-feature#android.hardware.bluetooth
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:10:5-12:36
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:11:5-13:36
 	android:required
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:12:9-33
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:13:9-33
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:11:9-50
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:12:9-50
 uses-permission#android.permission.BLUETOOTH
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:14:5-68
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:15:5-68
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:14:22-65
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:15:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:15:5-74
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:16:5-74
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:15:22-71
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:16:22-71
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:16:5-95
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:16:22-76
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:18:5-81
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:18:22-78
+uses-permission#android.permission.ACCESS_MOCK_LOCATION
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:5-95
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:22-76
+uses-permission#android.permission.SEND_SMS
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:20:5-67
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:20:22-64
 application
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:17:5-71:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\JongWN\.android\build-cache\fe7044e7896bcb0a573ec2ae36870b8753f184a3\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:transition:26.1.0] C:\Users\JongWN\.android\build-cache\2ae15c2c838ef3c99a50fffb9cea4dad058fe7bf\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:preference-v14:26.1.0] C:\Users\JongWN\.android\build-cache\98770a3babc6ab2700c83ae6f5baa9cf176a793d\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:preference-v7:26.1.0] C:\Users\JongWN\.android\build-cache\77ebb876d6826654c5739f40e3d54cd46653c075\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\JongWN\.android\build-cache\cd4a33751e50fdfed8dcce0847d2fcf249529a4b\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\JongWN\.android\build-cache\d3816292ea0c870838bae09904469a1f42e6288f\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\JongWN\.android\build-cache\029aaff783cd739a37b015a1d6370ff3ab1a44d1\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\JongWN\.android\build-cache\2adb08005ba37e0ea080a159ee7f386178616378\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\JongWN\.android\build-cache\8a96bc152c735f88a446c3f8e6f1f88283908e08\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\95045fbcec32bf34401d3bb683363d366a4f6c81\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\8bf76a01147a90789aaae1c980cf33e3e5e8b9ce\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\7422a2b02edce8785b5ba87152b1cb4afb272871\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\103ed5ab29c31299d979be25057670d87e1ed950\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\6bee97473c22dd5b9a21ecce5293416892212ad5\output\AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\3d18cb13633dc93f74fd9503bc3dc65dc0a253f5\output\AndroidManifest.xml:24:5-28:19
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\9ab87362ab61492e526463aec4ea8cd52fc5072e\output\AndroidManifest.xml:22:5-26:19
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:22:5-87:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\JongWN\.android\build-cache\502587d8edcaa3a3b968787da0acd0c81bd4c3e5\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\766d90b36c23d7920d87edff7bc31540d1d7818f\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\JongWN\.android\build-cache\7b93bb2699deb15f9ba68d221ba1af41a064acf2\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:preference-v14:26.1.0] C:\Users\JongWN\.android\build-cache\df8ebbe67b543225e4c614c767c855a81ce9d854\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:preference-v7:26.1.0] C:\Users\JongWN\.android\build-cache\e4f05cf44433bca4805e19722f8d2d1d1f8111ac\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\JongWN\.android\build-cache\c88a28c4936aa6be3c17d50ab081a365e80e9269\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\JongWN\.android\build-cache\1e71ff6688550d1bb64d9a043dc9c4f0923ed81e\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\JongWN\.android\build-cache\1a559807f36ceee179ec599446f996701be47105\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\JongWN\.android\build-cache\61d70e9095925f352ed11afc4c9df95a12d24ed8\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\JongWN\.android\build-cache\f37ab41b79fafd789142dce461dc549ac12c4f5e\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\5e6cfb85590d2aeff6bebf47fcac3115f3ee1384\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\e395222591b25a6fc2f2c9825fa590a711c42a93\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\56798be3120449805a5ae6f0b98d954fe5065b55\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\14a935040b0bea0729e4aa7364f397f3cc4691ac\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\5cbe50bcd1c7ec12fd3b6d74a4451bfd5b431879\output\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\ebe16af1bc0cb72f644fa8e75dce066fd639948a\output\AndroidManifest.xml:24:5-28:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\7f023c066e8515c2f8e5516cd2cebd37e7fbecb3\output\AndroidManifest.xml:22:5-26:19
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:20:9-41
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:25:9-41
 	android:supportsRtl
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:22:9-35
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:27:9-35
 	android:roundIcon
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:21:9-54
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:26:9-54
 	android:allowBackup
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:23:9-35
 	android:icon
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:9-45
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:24:9-45
 	android:theme
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:23:9-65
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:28:9-65
 activity#com.chaoyu.jongwn.taximeter.MainActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:24:9-30:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:29:9-35:20
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:24:19-47
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:29:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:33:27-74
 activity#com.chaoyu.jongwn.taximeter.SettingsActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:31:9-43:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:36:9-48:20
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:33:13-60
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:38:13-60
 	android:parentActivityName
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:34:13-55
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:39:13-55
 	android:theme
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:35:13-49
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:40:13-49
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:32:13-45
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:37:13-45
 intent-filter#android.intent.action.VIEW
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:36:13-38:29
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:41:13-43:29
 action#android.intent.action.VIEW
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:37:17-69
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:42:17-69
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:37:25-66
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:42:25-66
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:40:13-42:76
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:45:13-47:76
 	android:value
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:42:17-73
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:47:17-73
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:41:17-63
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:46:17-63
 activity#com.chaoyu.jongwn.taximeter.LoginActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:44:9-51:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:49:9-56:20
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:46:13-57
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:51:13-57
 	android:parentActivityName
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:47:13-55
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:52:13-55
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:45:13-42
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:50:13-42
 activity#com.chaoyu.jongwn.taximeter.PrintActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:52:9-60:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:57:9-65:20
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:54:13-57
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:59:13-57
 	android:parentActivityName
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:55:13-55
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:60:13-55
 	android:theme
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:56:13-69
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:61:13-69
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:53:13-42
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:58:13-42
 activity#com.chaoyu.jongwn.taximeter.HistoryActivity
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:61:9-69:20
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:66:9-74:20
 	android:label
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:63:13-59
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:68:13-59
+	android:parentActivityName
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:69:13-55
 	android:theme
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:64:13-69
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:70:13-69
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:62:13-44
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:67:13-44
+activity#com.chaoyu.jongwn.taximeter.TariffActivity
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:77:9-85:20
+	android:label
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:79:13-59
+	android:parentActivityName
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:80:13-55
+	android:theme
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:81:13-69
+	android:name
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:78:13-43
 service#com.chaoyu.jongwn.taximeter.service.CounterService
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:70:9-58
+ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:86:9-59
 	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:70:18-56
+		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:86:18-56
 uses-sdk
 INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\JongWN\.android\build-cache\fe7044e7896bcb0a573ec2ae36870b8753f184a3\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:transition:26.1.0] C:\Users\JongWN\.android\build-cache\2ae15c2c838ef3c99a50fffb9cea4dad058fe7bf\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v14:26.1.0] C:\Users\JongWN\.android\build-cache\98770a3babc6ab2700c83ae6f5baa9cf176a793d\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v7:26.1.0] C:\Users\JongWN\.android\build-cache\77ebb876d6826654c5739f40e3d54cd46653c075\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\JongWN\.android\build-cache\cd4a33751e50fdfed8dcce0847d2fcf249529a4b\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\JongWN\.android\build-cache\d3816292ea0c870838bae09904469a1f42e6288f\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\JongWN\.android\build-cache\029aaff783cd739a37b015a1d6370ff3ab1a44d1\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\JongWN\.android\build-cache\2adb08005ba37e0ea080a159ee7f386178616378\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\JongWN\.android\build-cache\8a96bc152c735f88a446c3f8e6f1f88283908e08\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\95045fbcec32bf34401d3bb683363d366a4f6c81\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\8bf76a01147a90789aaae1c980cf33e3e5e8b9ce\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\7422a2b02edce8785b5ba87152b1cb4afb272871\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\103ed5ab29c31299d979be25057670d87e1ed950\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\6bee97473c22dd5b9a21ecce5293416892212ad5\output\AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\3d18cb13633dc93f74fd9503bc3dc65dc0a253f5\output\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\9ab87362ab61492e526463aec4ea8cd52fc5072e\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\JongWN\.android\build-cache\502587d8edcaa3a3b968787da0acd0c81bd4c3e5\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\766d90b36c23d7920d87edff7bc31540d1d7818f\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:transition:26.1.0] C:\Users\JongWN\.android\build-cache\7b93bb2699deb15f9ba68d221ba1af41a064acf2\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:26.1.0] C:\Users\JongWN\.android\build-cache\df8ebbe67b543225e4c614c767c855a81ce9d854\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:26.1.0] C:\Users\JongWN\.android\build-cache\e4f05cf44433bca4805e19722f8d2d1d1f8111ac\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\JongWN\.android\build-cache\c88a28c4936aa6be3c17d50ab081a365e80e9269\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\JongWN\.android\build-cache\1e71ff6688550d1bb64d9a043dc9c4f0923ed81e\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\JongWN\.android\build-cache\1a559807f36ceee179ec599446f996701be47105\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\JongWN\.android\build-cache\61d70e9095925f352ed11afc4c9df95a12d24ed8\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\JongWN\.android\build-cache\f37ab41b79fafd789142dce461dc549ac12c4f5e\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\5e6cfb85590d2aeff6bebf47fcac3115f3ee1384\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\e395222591b25a6fc2f2c9825fa590a711c42a93\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\56798be3120449805a5ae6f0b98d954fe5065b55\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\14a935040b0bea0729e4aa7364f397f3cc4691ac\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\5cbe50bcd1c7ec12fd3b6d74a4451bfd5b431879\output\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\ebe16af1bc0cb72f644fa8e75dce066fd639948a\output\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\7f023c066e8515c2f8e5516cd2cebd37e7fbecb3\output\AndroidManifest.xml:20:5-44
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\766d90b36c23d7920d87edff7bc31540d1d7818f\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml
 		INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml
@@ -168,28 +196,28 @@ MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\bu
 		INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml
 		INJECTED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:transition:26.1.0] C:\Users\JongWN\.android\build-cache\2ae15c2c838ef3c99a50fffb9cea4dad058fe7bf\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:preference-v14:26.1.0] C:\Users\JongWN\.android\build-cache\98770a3babc6ab2700c83ae6f5baa9cf176a793d\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:preference-v7:26.1.0] C:\Users\JongWN\.android\build-cache\77ebb876d6826654c5739f40e3d54cd46653c075\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\JongWN\.android\build-cache\cd4a33751e50fdfed8dcce0847d2fcf249529a4b\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\JongWN\.android\build-cache\d3816292ea0c870838bae09904469a1f42e6288f\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\JongWN\.android\build-cache\029aaff783cd739a37b015a1d6370ff3ab1a44d1\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\JongWN\.android\build-cache\2adb08005ba37e0ea080a159ee7f386178616378\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\JongWN\.android\build-cache\8a96bc152c735f88a446c3f8e6f1f88283908e08\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\95045fbcec32bf34401d3bb683363d366a4f6c81\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\8bf76a01147a90789aaae1c980cf33e3e5e8b9ce\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\7422a2b02edce8785b5ba87152b1cb4afb272871\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\103ed5ab29c31299d979be25057670d87e1ed950\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\6bee97473c22dd5b9a21ecce5293416892212ad5\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\9ab87362ab61492e526463aec4ea8cd52fc5072e\output\AndroidManifest.xml:23:9-25:38
+ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\766d90b36c23d7920d87edff7bc31540d1d7818f\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\JongWN\.android\build-cache\7b93bb2699deb15f9ba68d221ba1af41a064acf2\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:preference-v14:26.1.0] C:\Users\JongWN\.android\build-cache\df8ebbe67b543225e4c614c767c855a81ce9d854\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:preference-v7:26.1.0] C:\Users\JongWN\.android\build-cache\e4f05cf44433bca4805e19722f8d2d1d1f8111ac\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\JongWN\.android\build-cache\c88a28c4936aa6be3c17d50ab081a365e80e9269\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\JongWN\.android\build-cache\1e71ff6688550d1bb64d9a043dc9c4f0923ed81e\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\JongWN\.android\build-cache\1a559807f36ceee179ec599446f996701be47105\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\JongWN\.android\build-cache\61d70e9095925f352ed11afc4c9df95a12d24ed8\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\JongWN\.android\build-cache\f37ab41b79fafd789142dce461dc549ac12c4f5e\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\5e6cfb85590d2aeff6bebf47fcac3115f3ee1384\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\JongWN\.android\build-cache\e395222591b25a6fc2f2c9825fa590a711c42a93\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\56798be3120449805a5ae6f0b98d954fe5065b55\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\JongWN\.android\build-cache\14a935040b0bea0729e4aa7364f397f3cc4691ac\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\JongWN\.android\build-cache\5cbe50bcd1c7ec12fd3b6d74a4451bfd5b431879\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\JongWN\.android\build-cache\7f023c066e8515c2f8e5516cd2cebd37e7fbecb3\output\AndroidManifest.xml:23:9-25:38
 	android:value
-		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\766d90b36c23d7920d87edff7bc31540d1d7818f\output\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\b98e3a30b9ea075cf88272c4a4bd2bf04854b008\output\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:design:26.1.0] C:\Users\JongWN\.android\build-cache\766d90b36c23d7920d87edff7bc31540d1d7818f\output\AndroidManifest.xml:27:13-51
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\3d18cb13633dc93f74fd9503bc3dc65dc0a253f5\output\AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\ebe16af1bc0cb72f644fa8e75dce066fd639948a\output\AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\3d18cb13633dc93f74fd9503bc3dc65dc0a253f5\output\AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\ebe16af1bc0cb72f644fa8e75dce066fd639948a\output\AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\3d18cb13633dc93f74fd9503bc3dc65dc0a253f5\output\AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\JongWN\.android\build-cache\ebe16af1bc0cb72f644fa8e75dce066fd639948a\output\AndroidManifest.xml:26:13-58

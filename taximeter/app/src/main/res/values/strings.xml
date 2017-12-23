@@ -81,11 +81,11 @@
     <!-- Example settings for account -->
     <string name="pref_header_account">Account Settings</string>
 
-    <string name="pref_account_first">Email</string>
-    <string name="pref_account_first_edit">Email</string>
+    <string name="pref_account_first"></string>
+    <string name="pref_account_first_edit">123@mail.com</string>
 
     <string name="pref_account_second">Password</string>
-    <string name="pref_account_second_edit">Password</string>
+    <string name="pref_account_second_edit">12345</string>
     <string name="pref_account_third">User Name</string>
     <string name="pref_account_third_edit">User Name</string>
     <string name="pref_account_forth">Taxi Number</string>
@@ -149,5 +149,29 @@
         <item>Last Month</item>
         <item>Custom</item>
     </string-array>
+    <string name="title_activity_tariff">Tariff</string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_tariff2">Tariff</string>
 
 </resources>

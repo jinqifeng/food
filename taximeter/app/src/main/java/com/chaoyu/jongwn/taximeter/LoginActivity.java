@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
@@ -28,7 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmail;
     private EditText etPassword;
     private Button btnLogin;
-
+    public  String email;
+    public String pass;
     Integer flag_login;
     String titlename;
     @Override
@@ -66,6 +68,22 @@ public class LoginActivity extends AppCompatActivity {
                 login();
             }
         });
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String value;
+        if (sharedPref.contains("account_first")) {
+
+            email =sharedPref.getString("account_first", "0");
+
+        }else{
+            email = "123@mail.com";
+        }
+        if (sharedPref.contains("account_second")) {
+
+            pass =sharedPref.getString("account_second", "0");
+
+        }else{
+            pass = "12345";
+        }
     }
     private void hideKeyboard() {
         View view = getCurrentFocus();
@@ -84,11 +102,11 @@ public class LoginActivity extends AppCompatActivity {
         }
         String d = etEmail.getText().toString().trim();
         String t = "123@mail.com";
-        if(!d.equals(t)){
+        if(!d.equals(email)){
             Toast.makeText(getApplicationContext(), R.string.error_invalid_email, Toast.LENGTH_SHORT).show();
             return;
         }
-        if(!etPassword.getText().toString().equals("12345")){
+        if(!etPassword.getText().toString().equals(pass)){
             Toast.makeText(getApplicationContext(), R.string.error_incorrect_password, Toast.LENGTH_SHORT).show();
             return;
         }

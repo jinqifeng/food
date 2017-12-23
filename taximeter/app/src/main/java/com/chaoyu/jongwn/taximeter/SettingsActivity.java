@@ -180,6 +180,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
+            bindPreferenceSummaryToValue(findPreference("general_first"));
             bindPreferenceSummaryToValue(findPreference("general_second"));
             bindPreferenceSummaryToValue(findPreference("general_third"));
             bindPreferenceSummaryToValue(findPreference("general_forth"));
@@ -246,8 +247,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // updated to reflect the new value, per the Android Design
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("initial_charge"));
-            bindPreferenceSummaryToValue(findPreference("distance_charge"));
+            bindPreferenceSummaryToValue(findPreference("initial_charge_n"));
+            bindPreferenceSummaryToValue(findPreference("distance_charge1"));
             bindPreferenceSummaryToValue(findPreference("waiting_charge"));
+            bindPreferenceSummaryToValue(findPreference("distance_charge2"));
+
             bindPreferenceSummaryToValue(findPreference("minimun_fare"));
             bindPreferenceSummaryToValue(findPreference("maximum_fare"));
             bindPreferenceSummaryToValue(findPreference("tax"));

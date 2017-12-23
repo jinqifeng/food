@@ -1,10 +1,12 @@
 package com.chaoyu.jongwn.taximeter;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.preference.DialogPreference;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -116,6 +118,8 @@ public class DistanceChargePreference extends DialogPreference {
 			if (callChangeListener(datevale)) {
 				persistString(datevale);
 			}
+			SharedPreferences mPref = PreferenceManager.getDefaultSharedPreferences(getContext());
+			mPref.edit().putString("distance_charge",datevale);
 		}
 	}
 

@@ -40,6 +40,7 @@
          android:layout_height="wrap_content"
          android:layout_weight="1"
          android:ems="10"
+         android:inputType="date"
          android:hint="11/12/2017" />
 
      <EditText
@@ -48,6 +49,7 @@
          android:layout_height="wrap_content"
          android:layout_weight="1"
          android:ems="10"
+         android:inputType="time"
          android:hint="22:10" />
 
  </LinearLayout>

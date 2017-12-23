@@ -3,7 +3,7 @@
     <EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_account_first_edit"
-        android:inputType="textCapWords"
+        android:inputType="textEmailAddress"
         android:key="account_first"
         android:maxLines="1"
         android:selectAllOnFocus="true"
@@ -12,7 +12,7 @@
     <EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_account_second_edit"
-        android:inputType="textCapWords"
+        android:inputType="textPassword"
         android:key="account_second"
         android:maxLines="1"
         android:selectAllOnFocus="true"
@@ -47,7 +47,7 @@
     <EditTextPreference
         android:capitalize="words"
         android:defaultValue="@string/pref_account_fifth_edit"
-        android:inputType="textCapWords"
+        android:inputType="number"
         android:key="account_fifth"
         android:maxLines="1"
         android:selectAllOnFocus="true"

@@ -1,37 +1,61 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <EditTextPreference
+
+
+        <PreferenceCategory
+            android:title="A Day" >
+           <EditTextPreference
             android:capitalize="words"
             android:defaultValue="50.00"
-            android:inputType="textCapWords"
+            android:inputType="numberDecimal"
             android:key="initial_charge"
             android:maxLines="1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="Initial Charge" />
+            android:title="Initial Charge for Day" />
+
+            <com.chaoyu.jongwn.taximeter.DistanceChargePreference
+                    android:key="distance_charge1"
+                    android:title="Distance charge  for Day"
+                    android:defaultValue="1.2-8.0-30.0"
+                    android:positiveButtonText="@android:string/ok"
+                    android:negativeButtonText="@android:string/cancel" />
 
 
-        <com.chaoyu.jongwn.taximeter.DistanceChargePreference
-            android:key="distance_charge"
-            android:title="Distance charge"
-            android:defaultValue="1.2-8.0-30.0"
-            android:positiveButtonText="@android:string/ok"
-            android:negativeButtonText="@android:string/cancel" />
+        </PreferenceCategory>
 
+        <PreferenceCategory
+            android:title="A Night">
+                <EditTextPreference
+                    android:capitalize="words"
+                    android:defaultValue="50.00"
+                    android:inputType="numberDecimal"
+                    android:key="initial_charge_n"
+                    android:maxLines="1"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:title="Initial Charge for Night" />
+                <com.chaoyu.jongwn.taximeter.DistanceChargePreference
+                    android:key="distance_charge2"
+                    android:title="Distance charge for Night"
+                    android:defaultValue="1.2-8.0-30.0"
+                    android:positiveButtonText="@android:string/ok"
+                    android:negativeButtonText="@android:string/cancel" />
+
+        </PreferenceCategory>
         <EditTextPreference
             android:capitalize="words"
             android:defaultValue="5.00"
-            android:inputType="textCapWords"
+            android:inputType="numberDecimal"
             android:key="waiting_charge"
             android:maxLines="1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:title="Waiting Charge" />
-
         <EditTextPreference
             android:capitalize="words"
             android:defaultValue="50.00"
-            android:inputType="textCapWords"
+            android:inputType="numberDecimal"
             android:key="minimun_fare"
             android:maxLines="1"
             android:selectAllOnFocus="true"
@@ -41,7 +65,7 @@
         <EditTextPreference
             android:capitalize="words"
             android:defaultValue="1000.0"
-            android:inputType="textCapWords"
+            android:inputType="numberDecimal"
             android:key="maximum_fare"
             android:maxLines="1"
             android:selectAllOnFocus="true"
@@ -51,7 +75,7 @@
         <EditTextPreference
             android:capitalize="words"
             android:defaultValue="0.00"
-            android:inputType="textCapWords"
+            android:inputType="numberDecimal"
             android:key="tax"
             android:maxLines="1"
             android:selectAllOnFocus="true"

@@ -87,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:id="@+id/imPrint"
         android:src="@drawable/ic_print_black_24dp"/>
 </LinearLayout>
     </android.support.v7.widget.CardView>

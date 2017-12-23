@@ -45,11 +45,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:inputType="numberDecimal"
             android:id="@+id/tvTo1"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:inputType="numberDecimal"
             android:id="@+id/tvChgP1"/>
 
     </LinearLayout>
@@ -76,6 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:inputType="numberDecimal"
             android:id="@+id/tvChgP2"/>
 
     </LinearLayout>

@@ -17,6 +17,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <include layout="@layout/content_print" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
