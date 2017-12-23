@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public String username,phonenumber,taxinumber;
 
     public  String sat_number;
-    public Location buffer[] = new Location[3];
+    public Location buffer;
 
     private class MyLocationListener implements LocationListener {
 
@@ -107,10 +107,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             if(!isGPSActive){
-                if(location.getSpeed()!=0.0)return;
-                buffer[0] =location;
-                buffer[1] = location;
-                buffer[2] = location;
+
+                buffer =location;
+
                 isGPSActive = true;
                 btnStart.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_shape));
                // return;
@@ -128,30 +127,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
            //double speed = getMySpeed(location,dis);
            double speed = getMySpeed2(location);
            double dis = calculateDistance(location);
-           if(speed ==0 ){
+
+
+           if(speed ==0.0 || dis==0.0 ){
 
                 if(!waitingstart){
                     waitingstart=true;
-               //     t1 = null;
-              //      t1 = new Thread1();
-              //      t1.start();
+                    t1 = null;
+                    t1 = new Thread1();
+                    t1.start();
                     waiting_time = 0;
                 }
-               tvSpeed.setText("WAITING");
-               waitingshow++;
-               if((waitingshow%6)==0){
-                   waiting_time += 1;
 
-                   tvSpeed_unit.setVisibility(View.INVISIBLE);
-                   price = calculatePrice(distance);
 
-                   tvFare.setText(Double.toString(Double.valueOf(df.format(price))));
-                   tvWait.setText(Double.toString(Double.valueOf(df.format(waiting_time*0.1))));
-               }
+
            }else{
                 if(waitingstart) {
-               //     t1.release();
-               //     t1 = null;
+                    t1.release();
+                    t1 = null;
                     waitingstart = false;
                     waitingshow = 0;
                 }
@@ -168,11 +161,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         public boolean isBetterLocation(Location location) {
-            boolean isNewer = location.getTime() > buffer[1].getTime();
+            boolean isNewer = location.getTime() > buffer.getTime();
 
             if(location.getSpeed()>200)return false;
             if(location.getSpeed()<4)return false;
-            boolean isMoreAccurate = (location.getAccuracy() < buffer[1].getAccuracy());
+            boolean isMoreAccurate = (location.getAccuracy() < buffer.getAccuracy());
             if (!isMoreAccurate && !isNewer) {
                 // More accurate and newer is always better.
                 return false;
@@ -181,9 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         public void locationbuffer(Location location){
 
-            buffer[2] = buffer[1];
-            buffer[1] = buffer[0];
-            buffer[0] = location;
+            buffer = location;
 
 
         }
@@ -191,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public double getMySpeed2(Location l){
             double t;
             t = l.getSpeed();
-            if(t>100)t = buffer[1].getSpeed();
+            if(t>100)t = buffer.getSpeed();
    /*         if(t==0){
                 if(buffer[1].getSpeed()==0 && buffer[2].getSpeed()==0){
                     t=0;
@@ -337,19 +328,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 */
             locListenD = new MyLocationListener();
-            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 0.0f, locListenD);
-            lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 500, 0.0f, locListenD);
+            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500L, 0.0f, locListenD);
+            lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 500L, 0.0f, locListenD);
         }
     }
     private double calculateDistance(Location location) {
-
+        double dist=0;
         if(distance_mearsure.equals("km")){
-            distance = (buffer[1].distanceTo(location))/1000.00;
+            dist = (buffer.distanceTo(location))/1000.00;
         }else{
-            distance = (buffer[1].distanceTo(location))/1609.00;
+            dist = (buffer.distanceTo(location))/1609.00;
         }
 
-        return distance;
+        return dist;
     }
 
     public void getPreferenceData(){
@@ -599,9 +590,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         distance = 0;
                         price = 0;
                         waiting_time = 0;waitingshow=0;
-                     //   t1=null;
-                     //   t1 = new Thread1();
-                    //    t1.start();
+                        t1=null;
+                        t1 = new Thread1();
+                        t1.start();
 
                         waitingstart = true;
                         Calendar calendar = Calendar.getInstance();
@@ -642,8 +633,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 datab.execSQL("INSERT INTO history_table (fare, tax, period, distance, start, end) VALUES('"+tvFare.getText().toString()+"','"+tax+"','"+period+"','"+distance+"','"+start+"','"+end+"');");
                 datab.close();
 
-             //   t1.release();
-            //    t1 = null;
+               t1.release();
+               t1 = null;
                 break;
             case R.id.btnHistory:
                 if (!isProcessActive) {

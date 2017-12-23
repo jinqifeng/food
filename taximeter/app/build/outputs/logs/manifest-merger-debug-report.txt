@@ -51,10 +51,6 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:18:5-81
 	android:name
 		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:18:22-78
-uses-permission#android.permission.ACCESS_MOCK_LOCATION
-ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:5-95
-	android:name
-		ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:19:22-76
 uses-permission#android.permission.SEND_SMS
 ADDED from F:\work\git\food\taximeter\app\src\main\AndroidManifest.xml:20:5-67
 	android:name
