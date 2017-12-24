@@ -32,16 +32,8 @@
         "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\drawable\\ic_local_car_black_24dp.xml"
     },
     {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\preference_list_divider_material.xml",
-        "source": "C:\\Users\\JongWN\\.android\\build-cache\\df8ebbe67b543225e4c614c767c855a81ce9d854\\output\\res\\drawable\\preference_list_divider_material.xml"
-    },
-    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tooltip_frame_light.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\drawable\\tooltip_frame_light.xml"
-    },
-    {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\JongWN\\.android\\build-cache\\766d90b36c23d7920d87edff7bc31540d1d7818f\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
@@ -62,10 +54,6 @@
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\drawable\\abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_sync_black_24dp.xml",
@@ -164,10 +152,6 @@
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\5cbe50bcd1c7ec12fd3b6d74a4451bfd5b431879\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
@@ -210,10 +194,6 @@
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
-        "source": "C:\\Users\\JongWN\\.android\\build-cache\\766d90b36c23d7920d87edff7bc31540d1d7818f\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",

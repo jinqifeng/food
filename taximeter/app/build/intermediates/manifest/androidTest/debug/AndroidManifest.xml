@@ -3,7 +3,7 @@
     package="com.chaoyu.jongwn.taximeter.test" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="23"
         android:targetSdkVersion="26" />
 
     <instrumentation

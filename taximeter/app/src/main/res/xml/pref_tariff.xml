@@ -4,6 +4,13 @@
 
         <PreferenceCategory
             android:title="A Day" >
+                <com.chaoyu.jongwn.taximeter.TimePreference
+                    android:key="time_picker_day"
+                    android:title="Starting Time of a Day Work "
+                    android:summary="a Day Work will start at "
+                    android:defaultValue="06:00:00"
+                    android:positiveButtonText="@android:string/ok"
+                    android:negativeButtonText="@android:string/cancel" />
            <EditTextPreference
             android:capitalize="words"
             android:defaultValue="50.00"
@@ -26,6 +33,13 @@
 
         <PreferenceCategory
             android:title="A Night">
+            <com.chaoyu.jongwn.taximeter.TimePreference
+                android:key="time_picker_night"
+                android:title="Starting Time of a Night Work "
+                android:summary="a Day Work will start at "
+                android:defaultValue="22:00:00"
+                android:positiveButtonText="@android:string/ok"
+                android:negativeButtonText="@android:string/cancel" />
                 <EditTextPreference
                     android:capitalize="words"
                     android:defaultValue="50.00"

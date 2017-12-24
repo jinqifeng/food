@@ -246,7 +246,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
+            bindPreferenceSummaryToValue(findPreference("time_picker_day"));
             bindPreferenceSummaryToValue(findPreference("initial_charge"));
+            bindPreferenceSummaryToValue(findPreference("time_picker_night"));
             bindPreferenceSummaryToValue(findPreference("initial_charge_n"));
             bindPreferenceSummaryToValue(findPreference("distance_charge1"));
             bindPreferenceSummaryToValue(findPreference("waiting_charge"));
