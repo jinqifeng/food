@@ -35,14 +35,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/my_toolbar" android:layout_alignParentRight="false"
         android:id="@+id/Fare">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fare"
 
@@ -53,36 +53,37 @@
             android:layout_width="match_parent"
             android:gravity="right"
             android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
 
-            android:gravity="right"
-            android:id="@+id/fare_unit"
-            android:text="Rs:"
-            android:textSize="15dp"
-            android:textColor="#ffffff" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                android:gravity="right"
+                android:id="@+id/fare_unit"
+                android:text="Rs:"
+                android:textSize="15dp"
+                android:textColor="#ffffff" />
 
-            android:id="@+id/tvFare"
-            android:textColor="#edff1a00"
-            android:text="50.00"
-            android:textSize="55dp"
+            <TextView
+                android:id="@+id/tvFare"
+                android:layout_width="wrap_content"
 
-            android:textStyle="bold" android:gravity="left"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:gravity="left"
 
-            />
+                android:text="50.00"
+                android:textColor="#edff1a00"
+                android:textSize="75dp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="fill_parent" android:id="@+id/Distance"
         android:layout_height="wrap_content" android:layout_below="@+id/Fare">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:text="Distance"
@@ -94,16 +95,19 @@
         android:layout_width="match_parent"
         android:gravity="right"
         android:layout_height="wrap_content">
+
         <TextView
+            android:id="@+id/tvDistance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#edff1a00"
-            android:text="0.00"
-            android:textSize="50dp"
-            android:textStyle="bold"
+            android:layout_below="@+id/tvFare"
+            android:layout_marginRight="10dp"
+            android:fontFamily="serif"
             android:gravity="center_vertical"
-            android:id="@+id/tvDistance" android:layout_below="@+id/tvFare"
-            android:layout_marginRight="10dp" />
+            android:text="0.0"
+            android:textColor="#edff1a00"
+            android:textSize="75dp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -115,11 +119,11 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="fill_parent" android:id="@+id/WaitTime"
         android:layout_height="wrap_content" android:layout_below="@+id/Distance">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:text="Wait Time"
@@ -132,18 +136,22 @@
         android:gravity="right"
 
         android:layout_height="wrap_content">
+
         <TextView
+            android:id="@+id/tvWaitTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#edff1a00"
-            android:text="0.00"
-            android:textSize="50dp"
-            android:textStyle="bold"
-
+            android:layout_below="@+id/tvDistance"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="top"
 
-            android:id="@+id/tvWaitTime" android:layout_below="@+id/tvDistance" android:layout_centerHorizontal="true"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+
+            android:fontFamily="serif"
+            android:text="0.0"
+            android:textColor="#edff1a00"
+            android:textSize="75dp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,17 +175,20 @@
             android:textColor="#ffffff"
             android:layout_weight="0.3"
             />
+
         <TextView
+            android:id="@+id/tvSpeed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#edff1a00"
-            android:text="Park" android:gravity="right"  android:textSize="25dp"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tvSpeed"
-
             android:layout_weight="1"
-             />
+            android:fontFamily="serif"
+            android:gravity="right"
+            android:text="waiting"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#edff1a00"
+
+            android:textSize="70dp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
