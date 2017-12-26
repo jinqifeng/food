@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     double first_tariff_day,first_to_day,second_tariff_day,first_tariff_night,first_to_night,second_tariff_night;
     public long  expire;
     public Integer waiting_time,waitingshow=0;
-    private double intevel;
+    private Integer intevel;
     boolean waitingstart=false;
     public String currency;
 
@@ -125,8 +125,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(!isProcessActive) return;
 
             DecimalFormat df = new DecimalFormat("0.0");
-//buffer.setLatitude(42.891255);
-//buffer.setSpeed(1);
+buffer.setLatitude(42.891255);
+buffer.setSpeed(1);
             btnStart.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_shape));
 
            //double speed = getMySpeed(location,dis);
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           //  dis = Double.parseDouble(df.format(dis));
 
 
-           if( ((speed < 4 && buffer.getSpeed()<4) || !motiondetector)){
+           if( ((speed < 4 && buffer.getSpeed()< 4) || !motiondetector)){
 
                 if(!waitingstart){
                     waitingstart=true;
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                    tvWait.setText(Double.toString(Double.valueOf(df.format(waiting_time * 0.1))));
              //  }
-               intevel = Double.valueOf(tvDistance.getText().toString());
+             //  intevel = (int)(Double.valueOf(tvDistance.getText().toString())*10);
 
            }else{
                 if(waitingstart) {
@@ -171,20 +171,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                distance += dis;
 
-
+               int temp = (int)(distance*10);
+               distance = (double)temp/10.0;
 
                tvDistance.setText(Double.toString(Double.valueOf(df.format(distance))));
 
                tvSpeed.setText(Double.toString(Double.valueOf(df.format(speed))));
                tvSpeed_unit.setVisibility(View.VISIBLE);
-               double ddd = Double.valueOf(tvDistance.getText().toString());
+            //   double ddd = Double.valueOf(tvDistance.getText().toString());
+//temp = 12;
+              // intevel = 11;
+               int k = temp-intevel;
 
-               double k = ddd-intevel;
-               double t = 0.1;
-               if(Double.compare(k,t)==1){
-                   price = calculatePrice(ddd);
+               if(Double.compare(k,1)==1){
+            //       price = calculatePrice(ddd);
+                   price = calculatePrice(distance);
                    tvFare.setText(Double.toString(Double.valueOf(df.format(price))));
-                   intevel = ddd;
+                   intevel = temp;
                 //   Toast.makeText(MainActivity.this, " speed"+price+ " "+ ddd, Toast.LENGTH_SHORT).show();
                }
 
@@ -381,7 +384,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             locListenD = new MyLocationListener();
             lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500L, 0.0f, locListenD);
-       //     lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 500L, 0.0f, locListenD);
+        //    lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 500L, 0.0f, locListenD);
         }
     }
     private double calculateDistance(Location location) {
@@ -671,7 +674,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         distance = 0;
                         price = 0;
                         waiting_time = -1;waitingshow=0;
-                        intevel = 0.0;
+                        intevel = 0;
                      //   t1=null;
                      //   t1 = new Thread1();
                      //   t1.start();
