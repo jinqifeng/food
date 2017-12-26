@@ -52,8 +52,8 @@ public class TimePreference extends DialogPreference {
 			picker.setCalendarViewShown(false);
 		}
 */
-		picker.setHour(lastHour);
-		picker.setMinute(lastMinut);
+		picker.setCurrentHour(lastHour);
+		picker.setCurrentMinute(lastMinut);
 		return (picker);
 	}
 
@@ -62,8 +62,8 @@ public class TimePreference extends DialogPreference {
 		super.onBindDialogView(v);
 
 	//	picker.updateDate(lastYear, lastMonth , lastDate);
-		picker.setHour(lastHour);
-		picker.setMinute(lastMinut);
+	//	picker.setHour(lastHour);
+	//	picker.setMinute(lastMinut);
 	}
 
 	@Override
@@ -71,8 +71,8 @@ public class TimePreference extends DialogPreference {
 		super.onDialogClosed(positiveResult);
 
 		if (positiveResult) {
-			lastHour = picker.getHour();
-			lastMinut = picker.getMinute();
+			lastHour = picker.getCurrentHour();
+			lastMinut = picker.getCurrentMinute();
 		//	lastSecond = picker.getDayOfMonth();
 		//	Integer record = lastMonth+1;
 			String datevale = "";

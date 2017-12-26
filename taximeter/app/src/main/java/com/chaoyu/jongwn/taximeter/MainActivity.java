@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean isGPSActive;
 
     private double price = 0, distance = 0 ;
-
+    private boolean daynight = true;
     public SQLiteDatabase datab;
     private LocationListener locListenD;
     public long start,end,period;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 */
             if(!isGPSActive){
 
-                buffer =location;
+               // buffer =location;
 
                 isGPSActive = true;
                 btnStart.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_shape));
@@ -125,16 +125,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(!isProcessActive) return;
 
             DecimalFormat df = new DecimalFormat("0.0");
-
-
+//buffer.setLatitude(42.891255);
+//buffer.setSpeed(1);
             btnStart.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_shape));
 
            //double speed = getMySpeed(location,dis);
            double speed = getMySpeed2(location);
            double dis = calculateDistance(location);
-           buffer=location;
+          //  dis = Double.parseDouble(df.format(dis));
 
-           if( (speed ==0  || !motiondetector)){
+
+           if( ((speed < 4 && buffer.getSpeed()<4) || !motiondetector)){
 
                 if(!waitingstart){
                     waitingstart=true;
@@ -146,16 +147,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 }
                waitingshow ++;
-               if((waitingshow%6)==0){
+               if((waitingshow%12)==0){
                    waiting_time++;
                }
                tvSpeed.setText("WAITING");
                tvSpeed_unit.setVisibility(View.INVISIBLE);
-               price = calculatePrice(distance);
+              // if(waiting_time!=-1) {
+                   price = calculatePrice(distance);
 
-               tvFare.setText(Double.toString(Double.valueOf(df.format(price))));
-               tvWait.setText(Double.toString(Double.valueOf(df.format(waiting_time*0.1))));
+                   tvFare.setText(Double.toString(Double.valueOf(df.format(price))));
 
+                   tvWait.setText(Double.toString(Double.valueOf(df.format(waiting_time * 0.1))));
+             //  }
+               intevel = Double.valueOf(tvDistance.getText().toString());
 
            }else{
                 if(waitingstart) {
@@ -164,23 +168,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     waitingstart = false;
                     waitingshow = 0;
                 }
-               lastspeed = speed;
+
                distance += dis;
+
+
 
                tvDistance.setText(Double.toString(Double.valueOf(df.format(distance))));
 
                tvSpeed.setText(Double.toString(Double.valueOf(df.format(speed))));
                tvSpeed_unit.setVisibility(View.VISIBLE);
-               double ddd = Double.parseDouble(tvDistance.getText().toString());
-               if((ddd-intevel)==0.1){
-                   price = calculatePrice(distance);
+               double ddd = Double.valueOf(tvDistance.getText().toString());
+
+               double k = ddd-intevel;
+               double t = 0.1;
+               if(Double.compare(k,t)==1){
+                   price = calculatePrice(ddd);
                    tvFare.setText(Double.toString(Double.valueOf(df.format(price))));
                    intevel = ddd;
+                //   Toast.makeText(MainActivity.this, " speed"+price+ " "+ ddd, Toast.LENGTH_SHORT).show();
                }
 
 
            }
-
+            buffer=location;
         }
         public boolean isBetterLocation(Location location) {
             boolean isNewer = location.getTime() > buffer.getTime();
@@ -297,7 +307,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             public void onStop() {
 
-                Toast.makeText(MainActivity.this, "Stope!", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(MainActivity.this, "Stope!", Toast.LENGTH_SHORT).show();
                 motiondetector = false;
             }
         });
@@ -355,35 +365,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         } else {
             //Toast.makeText(getApplicationContext(), "GPS signal search", Toast.LENGTH_SHORT).show();
-/*
+
             Location ll = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if(ll != null) {
 
 
-                buffer[0] =ll;
-                buffer[1] = ll;
-                buffer[2] = ll;
+                buffer =ll;
+
 
             }else{
                 Location ll2 = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                buffer[0] =ll2;
-                buffer[1] = ll2;
-                buffer[2] = ll2;
+
+                buffer = ll2;
             }
-*/
+
             locListenD = new MyLocationListener();
             lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500L, 0.0f, locListenD);
-         //   lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 500L, 0.0f, locListenD);
+       //     lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 500L, 0.0f, locListenD);
         }
     }
     private double calculateDistance(Location location) {
-        double dist=0.0;
+        double dist=0.000;
+        int r = 0;
         if(distance_mearsure.equals("km")){
             dist = (buffer.distanceTo(location))/1000.00;
         }else{
             dist = (buffer.distanceTo(location))/1609.00;
         }
-
         return dist;
     }
 
@@ -392,7 +400,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String value;
         if (sharedPref.contains("initial_charge")) {
 
-            value =sharedPref.getString("initial_charge", "0");
+            value =sharedPref.getString("initial_charge", "50.00");
             try {
                 initial_charge = Double.parseDouble(value); // Make use of autoboxing.  It's also easier to read.
             } catch (NumberFormatException e) {
@@ -404,7 +412,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (sharedPref.contains("initial_charge_n")) {
 
-            value =sharedPref.getString("initial_charge_n", "0");
+            value =sharedPref.getString("initial_charge_n", "50.00");
             try {
                 initial_charge_n = Double.parseDouble(value); // Make use of autoboxing.  It's also easier to read.
             } catch (NumberFormatException e) {
@@ -480,9 +488,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String split[]=value.split("-");
 
             try{
-                first_to_night = Double.parseDouble(split[0]);
-                first_tariff_night = Double.parseDouble(split[1]);
-                second_tariff_night = Double.parseDouble(split[2]);
+                first_to_night = Double.valueOf(split[0]);
+                first_tariff_night = Double.valueOf(split[1]);
+                second_tariff_night = Double.valueOf(split[2]);
 
             } catch (NumberFormatException e){
 
@@ -590,7 +598,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{
             nightvalue = "22:00";
         }
-        DateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+        DateFormat sdf = new SimpleDateFormat("hh:mm");
         try {
             Date daydate = sdf.parse(dayvalue);
             Date nightdate = sdf.parse(nightvalue);
@@ -604,8 +612,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if((curr.getTime()>daydate.getTime()) && (curr.getTime()<nightdate.getTime())){
                 tvFare.setText(Double.toString(initial_charge));
+                daynight = true;
             }else{
                 tvFare.setText(Double.toString(initial_charge_n));
+                daynight = false;
             }
 
          }catch (Exception e){
@@ -661,7 +671,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         distance = 0;
                         price = 0;
                         waiting_time = -1;waitingshow=0;
-                        intevel = 0.0;lastspeed = 0.0;
+                        intevel = 0.0;
                      //   t1=null;
                      //   t1 = new Thread1();
                      //   t1.start();
@@ -739,8 +749,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btnTariff:
-                intent = new Intent(this, TariffActivity.class);
-                startActivity(intent);
+                if (!isProcessActive) {
+                    intent = new Intent(this, TariffActivity.class);
+                    startActivity(intent);
+                }
                 break;
             case R.id.btnSend:
                 if(!isProcessActive){
@@ -831,7 +843,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Integer h = cal.get(Calendar.HOUR); Integer ap = cal.get(Calendar.AM_PM);
         double first_to, first_tarif, second_tarif;
         double initial;
-        if(((ap==Calendar.AM)&&(h>5))||((ap==Calendar.PM)&&(h<9))){
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String dayvalue,nightvalue;
+        if (sharedPref.contains("time_picker_day")) {
+
+            dayvalue =sharedPref.getString("time_picker_day", "06:00");
+
+        }else{
+            dayvalue = "06:00";
+        }
+        if (sharedPref.contains("time_picker_night")) {
+
+            nightvalue =sharedPref.getString("time_picker_night", "22:00");
+
+        }else{
+            nightvalue = "22:00";
+        }
+        DateFormat sdf = new SimpleDateFormat("hh:mm");
+        try {
+            Date daydate = sdf.parse(dayvalue);
+            Date nightdate = sdf.parse(nightvalue);
+
+            Calendar c = Calendar.getInstance();
+
+            int hour = c.get(Calendar.HOUR_OF_DAY);
+            int minute = c.get(Calendar.MINUTE);
+            String currenttime = ""+hour+":"+minute;
+            Date curr = sdf.parse(currenttime);
+
+            if((curr.getTime()>daydate.getTime()) && (curr.getTime()<nightdate.getTime())){
+
+                daynight = true;
+            }else{
+
+                daynight = false;
+            }
+
+        }catch (Exception e){
+
+        }
+
+        if(daynight){
             first_to = first_to_day; first_tarif = first_tariff_day; second_tarif = second_tariff_day;
             initial = initial_charge;
 
@@ -839,6 +891,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             first_to = first_to_night; first_tarif = first_tariff_night; second_tarif = second_tariff_night;
             initial = initial_charge_n;
         }
+        if(waiting_time<0)waiting_time=0;
         if (dist < first_to) {
             double price = waiting_fare*waiting_time*0.1 + initial;
 

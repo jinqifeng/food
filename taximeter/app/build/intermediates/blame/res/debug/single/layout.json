@@ -4,36 +4,44 @@
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\e4f05cf44433bca4805e19722f8d2d1d1f8111ac\\output\\res\\layout\\preference_information.xml"
     },
     {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_widget_checkbox.xml",
-        "source": "C:\\Users\\JongWN\\.android\\build-cache\\e4f05cf44433bca4805e19722f8d2d1d1f8111ac\\output\\res\\layout\\preference_widget_checkbox.xml"
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_material.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\df8ebbe67b543225e4c614c767c855a81ce9d854\\output\\res\\layout\\preference_material.xml"
     },
     {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\JongWN\\.android\\build-cache\\1a559807f36ceee179ec599446f996701be47105\\output\\res\\layout\\notification_template_media.xml"
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_widget_checkbox.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\e4f05cf44433bca4805e19722f8d2d1d1f8111ac\\output\\res\\layout\\preference_widget_checkbox.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
-        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\1a559807f36ceee179ec599446f996701be47105\\output\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_print.xml",
-        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\content_print.xml"
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\simple_spinner_dropdown_item.xml",
         "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_print.xml",
+        "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\content_print.xml"
+    },
+    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\766d90b36c23d7920d87edff7bc31540d1d7818f\\output\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\5cbe50bcd1c7ec12fd3b6d74a4451bfd5b431879\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pref_dialog_date.xml",
@@ -132,12 +140,20 @@
         "source": "F:\\work\\git\\food\\taximeter\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\5cbe50bcd1c7ec12fd3b6d74a4451bfd5b431879\\output\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\766d90b36c23d7920d87edff7bc31540d1d7818f\\output\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\5cbe50bcd1c7ec12fd3b6d74a4451bfd5b431879\\output\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_widget_seekbar.xml",
@@ -174,6 +190,10 @@
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\766d90b36c23d7920d87edff7bc31540d1d7818f\\output\\res\\layout\\design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_dropdown_material.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\df8ebbe67b543225e4c614c767c855a81ce9d854\\output\\res\\layout\\preference_dropdown_material.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_text_layout.xml",
@@ -256,6 +276,10 @@
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\1a559807f36ceee179ec599446f996701be47105\\output\\res\\layout\\notification_template_big_media.xml"
     },
     {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_information_material.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\df8ebbe67b543225e4c614c767c855a81ce9d854\\output\\res\\layout\\preference_information_material.xml"
+    },
+    {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\layout\\abc_screen_simple.xml"
     },
@@ -298,6 +322,10 @@
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\Users\\JongWN\\.android\\build-cache\\c88a28c4936aa6be3c17d50ab081a365e80e9269\\output\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_category_material.xml",
+        "source": "C:\\Users\\JongWN\\.android\\build-cache\\df8ebbe67b543225e4c614c767c855a81ce9d854\\output\\res\\layout\\preference_category_material.xml"
     },
     {
         "merged": "F:\\work\\git\\food\\taximeter\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
